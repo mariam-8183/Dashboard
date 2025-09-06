@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRM Dashboard</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-100 flex">
+
+  <!-- Sidebar -->
+  <aside class="w-64 h-screen bg-white shadow-md flex flex-col">
+    <div class="p-6 text-2xl font-bold text-gray-800 flex items-center gap-2">
+      <i data-lucide="plus" class="w-6 h-6 text-blue-600"></i>
+      Dashboard
+    </div>
+
+    <!-- Nav -->
+    <nav class="flex-1 px-4 mt-6">
+      <ul class="space-y-4">
+        <li class="flex items-center gap-3 text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer ">
+          <i data-lucide="home" class="w-5 h-5"></i> Dashboard
+        </li>
+        <li class="flex items-center gap-3 text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">
+          <i data-lucide="shopping-cart" class="w-5 h-5"></i> Product
+        </li>
+        <li class="flex items-center gap-3 text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">
+          <i data-lucide="users" class="w-5 h-5"></i> Customers
+        </li>
+        <li class="flex items-center gap-3 text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">
+          <i data-lucide="bar-chart-3" class="w-5 h-5"></i> Income
+        </li>
+        <li class="flex items-center gap-3 text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">
+          <i data-lucide="megaphone" class="w-5 h-5"></i> Promote
+        </li>
+        <li class="flex items-center gap-3 text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">
+          <i data-lucide="help-circle" class="w-5 h-5"></i> Help
+        </li>
+      </ul>
+    </nav>
+    <div class="mx-4 mb-6 p-4 bg-purple-100 text-center rounded-lg">
+      <p class="font-semibold mb-2">Upgrade to PRO</p>
+      <button class="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm">Get Pro Now!</button>
+    </div>
+
+    <!-- Profile -->
+    <div class="p-6 border-t flex items-center gap-3">
+      <img src="WhatsApp Image 2025-09-01 at 20.19.06_e83442cd.jpg" alt="User" class="w-10 h-10 rounded-full">
+      <div>
+        <p class="text-gray-800 font-semibold">Eng Mariam</p>
+        <p class="text-sm text-gray-500">Project Manager</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold">Hello Mariam 👋</h1>
+      <div class="relative">
+        <input type="text" id="tableSearch" placeholder="Search" class="pl-10 pr-4 py-2 border rounded-lg focus:outline-none">
+        <i data-lucide="search" class="w-5 h-5 absolute left-3 top-2.5 text-gray-400"></i>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 mb-6 rounded-lg overflow-hidden">
+      <!-- Card 1 -->
+      <div class="bg-white p-6 flex items-center gap-3 border-r">
+        <div class="p-3 bg-green-100 rounded-full text-green-600">
+          <i data-lucide="users" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Total Customers</p>
+          <h2 class="text-xl font-bold">5,423</h2>
+          <p class="text-green-500 text-sm">+15% this month</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white p-6 flex items-center gap-3 border-r">
+        <div class="p-3 bg-green-100 rounded-full text-green-600">
+          <i data-lucide="user-minus" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Members</p>
+          <h2 class="text-xl font-bold">1,893</h2>
+          <p class="text-red-500 text-sm">-10% this month</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white p-6 flex items-center gap-3">
+        <div class="p-3 bg-green-100 rounded-full text-green-600">
+          <i data-lucide="monitor" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Active Now</p>
+          <h2 class="text-xl font-bold">189</h2>
+         <div class="flex -space-x-2 mt-1">
+  <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-200 text-green-700">
+    <i class="fas fa-user"></i>
+  </span>
+  <span class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-200 text-blue-700">
+    <i class="fas fa-user"></i>
+  </span>
+  <span class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-200 text-yellow-700">
+    <i class="fas fa-user"></i>
+  </span>
+  <span class="w-8 h-8 flex items-center justify-center rounded-full bg-purple-200 text-purple-700">
+    <i class="fas fa-user"></i>
+  </span>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white rounded-lg shadow overflow-hidden">
+      <div class="p-4 flex justify-between items-center">
+        <div>
+          <h2 class="text-lg font-semibold">All Customers</h2>
+          <p class="text-sm text-blue-600">Active Members</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input type="text" id="tableSearch" placeholder="Search" class="px-3 py-1 border rounded text-sm">
+          <select class="border rounded px-2 py-1 text-sm">
+            <option>Newest</option>
+            <option>Oldest</option>
+          </select>
+        </div>
+      </div>
+
+      <table class="w-full text-left border-t" id="customerTable">
+        <thead class="bg-gray-50 text-gray-600 text-sm">
+          <tr>
+            <th class="py-3 px-4">Customer Name</th>
+            <th class="py-3 px-4">Company</th>
+            <th class="py-3 px-4">Phone Number</th>
+            <th class="py-3 px-4">Email</th>
+            <th class="py-3 px-4">Country</th>
+            <th class="py-3 px-4">Status</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm text-gray-700">
+          <tr class="border-t">
+            <td class="py-3 px-4">Jane Cooper</td>
+            <td class="py-3 px-4">Microsoft</td>
+            <td class="py-3 px-4">(225) 555-0118</td>
+            <td class="py-3 px-4">jane@microsoft.com</td>
+            <td class="py-3 px-4">United States</td>
+            <td class="py-3 px-4"><span class="px-2 py-1 rounded bg-green-100 text-green-600">Active</span></td>
+          </tr>
+          <tr class="border-t">
+            <td class="py-3 px-4">Floyd Miles</td>
+            <td class="py-3 px-4">Yahoo</td>
+            <td class="py-3 px-4">(205) 555-0100</td>
+            <td class="py-3 px-4">floyd@yahoo.com</td>
+            <td class="py-3 px-4">Kiribati</td>
+            <td class="py-3 px-4"><span class="px-2 py-1 rounded bg-red-100 text-red-600">Inactive</span></td>
+          </tr>
+          <tr class="border-t">
+            <td class="py-3 px-4">Ronald Richards</td>
+            <td class="py-3 px-4">Adobe</td>
+            <td class="py-3 px-4">(302) 555-0107</td>
+            <td class="py-3 px-4">ronald@adobe.com</td>
+            <td class="py-3 px-4">Israel</td>
+            <td class="py-3 px-4"><span class="px-2 py-1 rounded bg-red-100 text-red-600">Inactive</span></td>
+          </tr>
+          <tr class="border-t">
+            <td class="py-3 px-4">Marvin McKinney</td>
+            <td class="py-3 px-4">Tesla</td>
+            <td class="py-3 px-4">(252) 555-0126</td>
+            <td class="py-3 px-4">marvin@tesla.com</td>
+            <td class="py-3 px-4">Iran</td>
+            <td class="py-3 px-4"><span class="px-2 py-1 rounded bg-green-100 text-green-600">Active</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Pagination -->
+      <div class="p-4 flex justify-between items-center text-sm text-gray-500">
+        <p>Showing data 1 to 8 of 256K entries</p>
+        <div class="flex gap-2">
+          <button class="px-2 py-1 border rounded hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer ">1</button>
+          <button class="px-2 py-1 border rounded hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">2</button>
+          <button class="px-2 py-1 border rounded hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">3</button>
+          <button class="px-2 py-1 border rounded hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">...</button>
+          <button class="px-2 py-1 border rounded hover:bg-blue-600 hover:text-white px-3 py-2 rounded-lg cursor-pointer">40</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+  
+    lucide.createIcons();
+
+ 
+    let searchInput = document.getElementById('tableSearch');
+    let tableRows = document.querySelectorAll('#customerTable tbody tr');
+
+    searchInput.addEventListener('keyup', function() {
+      let hero = this.value.toLowerCase();
+      tableRows.forEach(row => {
+        let text = row.innerText.toLowerCase();
+        row.style.display = text.includes(hero) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
